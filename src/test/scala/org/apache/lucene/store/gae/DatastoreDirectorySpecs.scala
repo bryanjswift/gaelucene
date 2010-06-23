@@ -1,4 +1,4 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import java.util.Calendar
 import org.apache.lucene.analysis.WhitespaceAnalyzer
@@ -6,7 +6,7 @@ import org.apache.lucene.document.{Document,Field}
 import org.apache.lucene.index.{IndexReader,IndexWriter}
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.store.Directory
-import quotidian.DatastoreSpecification
+import com.google.specs.DatastoreSpecification
 
 class DatastoreDirectorySpecs extends DatastoreSpecification {
 	val docsToAdd = 500

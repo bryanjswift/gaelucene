@@ -1,10 +1,10 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import com.google.appengine.api.datastore.{Blob,Entity}
 import java.io.{File,IOException}
 import java.util.Calendar
 import org.apache.lucene.store.{FSDirectory,IndexInput,IndexOutput}
-import quotidian.DatastoreSpecification
+import com.google.specs.DatastoreSpecification
 
 class DatastoreIndexInputSpecs extends DatastoreSpecification {
 	val filename = "1.fdx"

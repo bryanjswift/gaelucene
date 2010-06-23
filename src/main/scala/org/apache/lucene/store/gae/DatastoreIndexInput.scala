@@ -1,4 +1,4 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import org.apache.lucene.store.IndexInput
 import java.util.zip.{Checksum,CRC32}

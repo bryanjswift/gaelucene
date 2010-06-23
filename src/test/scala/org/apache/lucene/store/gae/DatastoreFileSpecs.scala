@@ -1,7 +1,7 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import com.google.appengine.api.datastore.Blob
-import quotidian.DatastoreSpecification
+import com.google.specs.DatastoreSpecification
 
 class DatastoreFileSpecs extends DatastoreSpecification {
 	"An empty file" should {

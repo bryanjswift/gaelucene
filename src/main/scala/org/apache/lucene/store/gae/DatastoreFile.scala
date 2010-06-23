@@ -1,10 +1,9 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import DatastoreFile.{Contents,DateModified,Deleted,Filename,Kind,Size}
 import com.google.appengine.api.datastore.{Blob,Entity}
 import java.io.IOException
 import java.util.Calendar
-import quotidian.Logging
 
 /** Representation of a file which relies on Datastore Entity objects
 	*
@@ -12,7 +11,7 @@ import quotidian.Logging
 	* @param position		starting position for reading/writing from bytes
 	* @param bytes			list of bytes representing the starting data of this file
 	* @param ent				savable datastore representation of the file */
-class DatastoreFile(val position:Int, private val bytes:List[Byte], private val ent:Entity) extends Logging {
+class DatastoreFile(val position:Int, private val bytes:List[Byte], private val ent:Entity) {
 	/** Default constructor, no entity is provided so a new one is created */
 	private def this() = this(0,List[Byte](),new Entity(Kind,DatastoreDirectory.index))
 	/** Constructor with entity, initial position and an array

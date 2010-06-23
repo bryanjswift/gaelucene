@@ -1,4 +1,4 @@
-package quotidian.search
+package org.apache.lucene.store.gae
 
 import DatastoreDirectory.fileByName
 import com.google.appengine.api.datastore.{DatastoreService,DatastoreServiceFactory,Entity,PreparedQuery,Query}
@@ -6,9 +6,8 @@ import com.google.appengine.api.datastore.FetchOptions.Builder.{withChunkSize}
 import java.io.{IOException,Serializable}
 import java.util.Calendar
 import org.apache.lucene.store.{Directory,IndexInput,IndexOutput,LockFactory,NoLockFactory}
-import quotidian.Logging
 
-class DatastoreDirectory extends Directory with Logging {
+class DatastoreDirectory extends Directory {
 	lockFactory = new DatastoreLockFactory
 	def close:Unit = { /* nothing to do here */ }
 	def createOutput(name:String):IndexOutput = new DatastoreIndexOutput(this,fileByName(name))
