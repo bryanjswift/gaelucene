@@ -1,15 +1,8 @@
-.classpath
-.manager
-.project
 .session
 *.tmproj
-bin
-lib_managed
 project/build/target
 project/boot
-quotidian.*
-src/main/webapp/css/*.css
+project/lib_managed
 tags
 target
 WEB-INF
-!src/main/webapp/WEB-INF
