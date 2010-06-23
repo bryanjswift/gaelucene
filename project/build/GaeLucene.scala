@@ -6,9 +6,9 @@ class GaeLuceneProject(info:ProjectInfo) extends DefaultProject(info) {
   // locate the Home directory
   val userHome = system[File]("user.home")
   // define custom property
-  val defaultGaeHome = userHome.value + "/Documents/src/gae/" + "appengine-java-sdk-1.3.1"
+  val defaultGaeHome = userHome.value + "/Documents/src/gae/" + "appengine-java-sdk-1.3.3"
   val gaeHome = propertyOptional[String](defaultGaeHome)
-  lazy val gaePath = Path.fromFile(gaeHome.value)
+  val gaePath = Path.fromFile(gaeHome.value)
 
   // Lucene
   val luceneCore = "org.apache.lucene" % "lucene-core" % "3.0.1"
@@ -18,7 +18,7 @@ class GaeLuceneProject(info:ProjectInfo) extends DefaultProject(info) {
   val specs = "org.scala-tools.testing" % "specs" % "1.6.1-2.8.0.Beta1-RC6" % "test->default"
 
   // App Engine paths
-  val gaeSharedJars = gaePath / "lib" / "shared" * "*.jar"
+  val gaeSharedJars = gaePath / "lib" / "shared" * "*.jar" +++ gaePath / "lib" / "user" * "*.jar"
   val gaeTestingJars = gaePath / "lib" / "impl" * "*.jar" +++ gaePath / "lib" / "testing" * "*.jar"
 
   val jars = gaeSharedJars
