@@ -1,0 +1,8 @@
+The intention of this project was to create a way to index data using Lucene
+with the index stored on the App Engine servers to be both readable and writable.
+
+This is an implementation of Lucene's Directory, IndexInput and IndexOutput
+interfaces which when flushed write to the AppEngine datastore.
+
+This project was originally embedded in the source for http://www.quotecrate.com
+at http://github.com/bryanjswift/quotidian
