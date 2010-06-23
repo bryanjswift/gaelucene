@@ -2,6 +2,7 @@
 .manager
 .project
 .session
+*.tmproj
 bin
 lib_managed
 project/build/target
