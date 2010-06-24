@@ -1,4 +1,4 @@
-package org.apache.lucene.store.gae
+package com.bryanjswift.lucene.store.gae
 
 import java.util.Calendar
 import org.apache.lucene.analysis.WhitespaceAnalyzer

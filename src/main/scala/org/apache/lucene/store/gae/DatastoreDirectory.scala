@@ -1,4 +1,4 @@
-package org.apache.lucene.store.gae
+package com.bryanjswift.lucene.store.gae
 
 import DatastoreDirectory.fileByName
 import com.google.appengine.api.datastore.{DatastoreService,DatastoreServiceFactory,Entity,PreparedQuery,Query}

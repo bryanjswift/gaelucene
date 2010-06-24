@@ -1,4 +1,4 @@
-package org.apache.lucene.store.gae
+package com.bryanjswift.lucene.store.gae
 
 import DatastoreFile.{Contents,DateModified,Deleted,Filename,Kind,Size}
 import com.google.appengine.api.datastore.{Blob,Entity}
